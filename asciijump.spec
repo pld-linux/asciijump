@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.3 2003-03-02 00:41:34 wolf Exp $
+# $Id: asciijump.spec,v 1.4 2003-03-07 23:44:24 gotar Exp $
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README-pl
+%doc README README-pl
 %attr(755,root,root) %{_bindir}/asciijump
 %{_datadir}/asciijump
 %{_applnkdir}/Games/Arcade/asciijump.desktop
