@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.14 2003-08-06 16:14:47 kloczek Exp $
+# $Id: asciijump.spec,v 1.15 2003-08-18 08:07:55 gotar Exp $
 %define _ver	1.0.1beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
@@ -37,7 +37,7 @@ install -d $RPM_BUILD_ROOT/var/games/asciijump
 # FixMe: replace with find?
 # find . -type d -name '\.svn' -exec rm -rf {} \;
 rm -rf hills/.svn gfx/.svn
-for i in gfx/*; do 
+for i in gfx/*; do
 	rm -rf $i/.svn
 done
 %{__make} install \
