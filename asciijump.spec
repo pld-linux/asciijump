@@ -1,15 +1,16 @@
-# $Id: asciijump.spec,v 1.16 2003-08-31 21:02:39 undefine Exp $
+# $Id: asciijump.spec,v 1.17 2003-12-10 16:06:34 grzegol Exp $
 %define _ver	1.0.1beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
 Version:	1.0.1
-Release:	1.beta
+Release:	1.beta.1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
-# Source0-md5:	d566ac2b38c03d4cf726e49e5fe7eb21
 Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
+# Source0-md5:	d566ac2b38c03d4cf726e49e5fe7eb21
+Patch0:		%{name}-desktop_install.patch
 URL:		http://asciijump.prv.pl/
 BuildRequires:	autoconf
 BuildRequires:	conflib-devel
@@ -25,6 +26,7 @@ Skoki narciarskie w trybie tekstowym.
 
 %prep
 %setup -q -n asciijump-%{_ver}
+%patch0 -p1
 
 %build
 %{__autoconf}
@@ -55,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(775,root,games) %{_var}/games/asciijump
 %{_datadir}/asciijump
 %{_mandir}/man6/asciijump.6*
-%{_applnkdir}/Games/Arcade/asciijump.desktop
+%{_desktopdir}/asciijump.desktop
 %{_pixmapsdir}/asciijump.png
