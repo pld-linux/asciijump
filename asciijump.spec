@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.8 2003-03-17 16:17:07 qboosh Exp $
+# $Id: asciijump.spec,v 1.9 2003-03-17 21:02:14 adamg Exp $
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
@@ -31,7 +31,13 @@ Skoki narciarskie w trybie tekstowym.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/var/games/asciijump
-
+# get rid of those subversion related directories
+# FixMe: replace with find?
+# find . -type d -name '\.svn' -exec rm -rf {} \;
+rm -rf hills/.svn gfx/.svn
+for i in gfx/*; do 
+	rm -rf $i/.svn
+done
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
