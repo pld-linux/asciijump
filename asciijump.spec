@@ -1,16 +1,18 @@
-# $Id: asciijump.spec,v 1.9 2003-03-17 21:02:14 adamg Exp $
+# $Id: asciijump.spec,v 1.10 2003-05-03 20:48:53 adamg Exp $
+%define _ver	1.0.0beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
-Version:	0.0.6
-Release:	1
+Version:	1.0.0
+Release:	0.beta
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
-Source0:	http://otak.k-k.pl/asciijump/%{name}-%{version}.tar.gz
+Source0:	http://otak.k-k.pl/asciijump/%{name}-%{_ver}.tar.gz
 URL:		http://asciijump.prv.pl/
 BuildRequires:	conflib-devel
 BuildRequires:	slang-devel
+BuildRequires:	ctags
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,7 +22,7 @@ Ski jumping in text mode.
 Skoki narciarskie w trybie tekstowym.
 
 %prep
-%setup -q
+%setup -q -n asciijump-%{_ver}
 
 %build
 %{__autoconf}
@@ -47,6 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README README-pl
 %attr(2750,root,games) %{_bindir}/asciijump
+%attr(2750,root,games) %{_bindir}/aj-server
 %attr(775,root,games) %{_var}/games/asciijump
 %{_datadir}/asciijump
 %{_mandir}/man6/asciijump.6*
