@@ -1,17 +1,15 @@
-# $Id: asciijump.spec,v 1.18 2003-12-12 15:28:45 grzegol Exp $
-%define _ver	1.0.1beta
+# $Id: asciijump.spec,v 1.19 2003-12-18 22:00:49 undefine Exp $
+%define _ver	1.0.2beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
-Version:	1.0.1
-Release:	1.beta.1
+Version:	1.0.2
+Release:	0.beta.1
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
 Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
-# Source0-md5:	d566ac2b38c03d4cf726e49e5fe7eb21
-Patch0:		%{name}-desktop_install.patch
-Patch1:		%{name}-desktop.patch
+# Source0-md5:	199228bbfb4a16914913fe594b775a6d
 URL:		http://asciijump.prv.pl/
 BuildRequires:	autoconf
 BuildRequires:	conflib-devel
@@ -27,8 +25,6 @@ Skoki narciarskie w trybie tekstowym.
 
 %prep
 %setup -q -n asciijump-%{_ver}
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__autoconf}
@@ -37,14 +33,6 @@ Skoki narciarskie w trybie tekstowym.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/var/games/asciijump
-# get rid of those subversion related directories
-# FixMe: replace with find?
-# find . -type d -name '\.svn' -exec rm -rf {} \;
-rm -rf hills/.svn gfx/.svn
-for i in gfx/*; do
-	rm -rf $i/.svn
-done
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
