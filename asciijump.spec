@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.12 2003-05-28 12:27:55 adamg Exp $
+# $Id: asciijump.spec,v 1.13 2003-07-07 04:23:49 blues Exp $
 %define _ver	1.0.1beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
@@ -12,8 +12,8 @@ Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
 Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
 URL:		http://asciijump.prv.pl/
 BuildRequires:	conflib-devel
-BuildRequires:	slang-devel
 BuildRequires:	ctags
+BuildRequires:	slang-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +32,6 @@ Skoki narciarskie w trybie tekstowym.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/var/games/asciijump
 # get rid of those subversion related directories
 # FixMe: replace with find?
@@ -41,7 +40,8 @@ rm -rf hills/.svn gfx/.svn
 for i in gfx/*; do 
 	rm -rf $i/.svn
 done
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
