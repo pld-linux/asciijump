@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.7 2003-03-17 15:59:50 adamg Exp $
+# $Id: asciijump.spec,v 1.8 2003-03-17 16:17:07 qboosh Exp $
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
@@ -43,6 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(2750,root,games) %{_bindir}/asciijump
 %attr(775,root,games) %{_var}/games/asciijump
 %{_datadir}/asciijump
-%{_mandir}/man6/asciijump.6.gz
+%{_mandir}/man6/asciijump.6*
 %{_applnkdir}/Games/Arcade/asciijump.desktop
 %{_pixmapsdir}/asciijump.png
