@@ -1,0 +1,18 @@
+diff -urN aaa/asciijump-1.0.1beta/asciijump.desktop asciijump-1.0.1beta/asciijump.desktop
+--- aaa/asciijump-1.0.1beta/asciijump.desktop	2003-04-22 21:39:49.000000000 +0200
++++ asciijump-1.0.1beta/asciijump.desktop	2003-12-12 16:21:51.000000000 +0100
+@@ -1,10 +1,11 @@
+ [Desktop Entry]
+ Name=asciijump
+-Comment=a clone of the dsj game.
+-Comment[pl]=klon gry dsj.
++Comment=A clone of the dsj game
++Comment[pl]=Klon gry dsj
+ Icon=asciijump.xpm
+ Exec=asciijump
+-Terminal=1
++Terminal=true
+ Type=Application
+ Categories=GNOME;Application;Game;BoardGame;
+ StartupNotify=true
++Encoding=UTF-8
