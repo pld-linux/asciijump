@@ -1,4 +1,4 @@
-# $Id: asciijump.spec,v 1.10 2003-05-03 20:48:53 adamg Exp $
+# $Id: asciijump.spec,v 1.11 2003-05-25 05:45:43 misi3k Exp $
 %define _ver	1.0.0beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
