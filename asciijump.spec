@@ -1,8 +1,8 @@
-# $Id: asciijump.spec,v 1.5 2003-03-08 01:17:56 adamg Exp $
+# $Id: asciijump.spec,v 1.6 2003-03-17 14:14:13 adamg Exp $
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
-Version:	0.0.5
+Version:	0.0.6
 Release:	1
 License:	GPL
 Group:		Applications/Games
