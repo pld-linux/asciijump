@@ -1,14 +1,15 @@
-# $Id: asciijump.spec,v 1.11 2003-05-25 05:45:43 misi3k Exp $
-%define _ver	1.0.0beta
+# $Id: asciijump.spec,v 1.12 2003-05-28 12:27:55 adamg Exp $
+%define _ver	1.0.1beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
-Version:	1.0.0
+Version:	1.0.1
 Release:	0.beta
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
-Source0:	http://otak.k-k.pl/asciijump/%{name}-%{_ver}.tar.gz
+# Source0-md5:	d566ac2b38c03d4cf726e49e5fe7eb21
+Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
 URL:		http://asciijump.prv.pl/
 BuildRequires:	conflib-devel
 BuildRequires:	slang-devel
