@@ -1,0 +1,19 @@
+diff -urN aaa/asciijump-1.0.1beta/Makefile.in asciijump-1.0.1beta/Makefile.in
+--- aaa/asciijump-1.0.1beta/Makefile.in	2003-05-10 10:25:54.000000000 +0200
++++ asciijump-1.0.1beta/Makefile.in	2003-12-10 16:57:45.000000000 +0100
+@@ -138,13 +138,9 @@
+ 	${INSTALL_PROGRAM} ${ac_name} ${DESTDIR}${bindir}/
+ 	${INSTALL_PROGRAM} ${as_name} ${DESTDIR}${bindir}/
+ 
+-	${INSTALL} -d $(DESTDIR)$(prefix)/X11R6/share/applnk/Games/Arcade
++	${INSTALL} -d $(DESTDIR)$(prefix)/share/applications
+ 	${INSTALL} -m 644 asciijump.desktop \
+-		$(DESTDIR)$(prefix)/X11R6/share/applnk/Games/Arcade
+-		
+-	${INSTALL} -d $(DESTDIR)$(prefix)/share/applnk/Games/Arcade
+-	${INSTALL} -m 644 asciijump.desktop \
+-		$(DESTDIR)$(prefix)/share/applnk/Games/Arcade
++		$(DESTDIR)$(prefix)/share/applications
+ 		
+ 	${INSTALL} -d $(DESTDIR)$(prefix)/X11R6/share/pixmaps
+ 	${INSTALL} -m 644 asciijump.png $(DESTDIR)$(prefix)/X11R6/share/pixmaps
