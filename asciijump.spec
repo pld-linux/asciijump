@@ -1,14 +1,15 @@
-%define _ver	1.0.2beta
+%define		_ver	1.0.2beta
 Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
 Version:	1.0.2
-Release:	0.beta.2
+Release:	0.beta.3
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
 Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
 # Source0-md5:	199228bbfb4a16914913fe594b775a6d
+Patch0:		%{name}-desktop.patch
 URL:		http://asciijump.prv.pl/
 BuildRequires:	autoconf
 BuildRequires:	conflib-devel
@@ -24,6 +25,7 @@ Skoki narciarskie w trybie tekstowym.
 
 %prep
 %setup -q -n asciijump-%{_ver}
+%patch0 -p1
 
 %build
 %{__autoconf}
