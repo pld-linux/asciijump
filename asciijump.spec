@@ -3,7 +3,7 @@ Summary:	(a)sci(i)jump game
 Summary(pl):	Skoki narciarskie w ascii
 Name:		asciijump
 Version:	1.0.2
-Release:	0.beta.3
+Release:	0.beta.4
 License:	GPL
 Group:		Applications/Games
 Vendor:		Grzegorz Moskal <g.moskal@opengroup.org>
@@ -14,7 +14,7 @@ URL:		http://asciijump.prv.pl/
 BuildRequires:	autoconf
 BuildRequires:	conflib-devel
 BuildRequires:	ctags
-BuildRequires:	slang-devel
+BuildRequires:	slang-devel >= 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
