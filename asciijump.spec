@@ -1,6 +1,6 @@
 %define		_ver	1.0.2beta
 Summary:	(a)sci(i)jump game
-Summary(pl):	Skoki narciarskie w ascii
+Summary(pl.UTF-8):   Skoki narciarskie w ascii
 Name:		asciijump
 Version:	1.0.2
 Release:	0.beta.4
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ski jumping in text mode.
 
-%description -l pl
+%description -l pl.UTF-8
 Skoki narciarskie w trybie tekstowym.
 
 %prep
