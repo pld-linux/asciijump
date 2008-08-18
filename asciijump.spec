@@ -12,7 +12,6 @@ Source0:	http://otak.k-k.pl/asciijump/tgz/%{name}-%{_ver}.tar.gz
 Patch0:		%{name}-desktop.patch
 URL:		http://asciijump.prv.pl/
 BuildRequires:	autoconf
-BuildRequires:	conflib-devel
 BuildRequires:	ctags
 BuildRequires:	slang-devel >= 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
