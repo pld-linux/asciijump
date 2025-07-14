@@ -24,7 +24,7 @@ Skoki narciarskie w trybie tekstowym.
 
 %prep
 %setup -q -n asciijump-%{_ver}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__autoconf}
